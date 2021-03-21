@@ -19,8 +19,8 @@ Com o ambiente já aberto no terminal, execute esse comando para iniciar o proje
 
 # Detalhes do projeto
 O projeto tem como função ler dois arquivos NetCDF, 
-`observation.nc` - Arquivo com dados de temperatura observados
-`forecast.nc` - Arquivo com dados de temperatura previstos
+ - `observation.nc` - Arquivo com dados de temperatura observados
+ - `forecast.nc` - Arquivo com dados de temperatura previstos
 
 Com esses arquivos lidos, a ideia é usar seus dados para calcular uma série de índices **RMSE** (Raiz quadrada do erro-médio).
 
@@ -32,11 +32,11 @@ Isso pode ser dividido em três tarefas:
 Para isso foi usado, principalmente, a biblioteca **XArray** para leitura e manipulação dos dados dos arquivos NetCDF; a biblioteca **Numpy** para a realização dos cálculos do índice RMSE; e a biblioteca **Matplotlib** para plotar os dados em gráficos.
 
 ## Principais variáveis
-`obs` - Váriavel que armazena o DataSet do arquivo de observação
-`fc` -  Váriavel que armazena o DataSet do arquivo de previsão
-`generalRMSE`- DataArray com o índice RMSE de cada coordenada para cada intervalo
-`localRMSE` - DataArray com o índice RMSE da coordenada de SP para cada intervalo
-`dsRMSE` - Variável que armazena a conversão do DataArray com os Índices RMSE gerais para um DataSet, com a intenção de salvar os dados em um arquivo NetCDF
+- `obs` - Váriavel que armazena o DataSet do arquivo de observação
+- `fc` -  Váriavel que armazena o DataSet do arquivo de previsão
+- `generalRMSE`- DataArray com o índice RMSE de cada coordenada para cada intervalo
+- `localRMSE` - DataArray com o índice RMSE da coordenada de SP para cada intervalo
+- `dsRMSE` - Variável que armazena a conversão do DataArray com os Índices RMSE gerais para um DataSet, com a intenção de salvar os dados em um arquivo NetCDF
 
 ## Descrição do cálculo
 O cálculo do Índice RMSE é feito com a seguinte lógica:  
